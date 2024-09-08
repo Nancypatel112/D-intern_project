@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <h2>DashStack</h2>
+            </div>
+            <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="product.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="fav.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a href="inbox.html"><i class="fas fa-inbox"></i> Inbox</a>
+            <a href="order.html"><i class="fas fa-list"></i> Order List</a>
+            <a href="stock.html"><i class="fas fa-check-square"></i> Product Stock</a>
+
+            <p class="sidebar-title">Pages</p>
+            <a href="pricing.html"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="calender2.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="todo.html"><i class="fas fa-check-square"></i> To-Do</a>
+            <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+            <a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a>
+            <a href="ui.html"><i class="fas fa-sliders-h"></i> UI Elements</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="table.html"><i class="fas fa-table"></i> Table</a>
+        </div>
+
+        <div class="settings-logout">
+            <p class="sidebar-title">Settings</p>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="right-header">
+                <i class="fas fa-bell notification-icon"></i> <!-- Bell Icon -->
+                <select class="language-selector">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+                <div class="user-info">
+                    <img src="https://play-lh.googleusercontent.com/LqgSQHWNv9Dc7DS_J3BgYfZviCti_RBgQNDUHqFWqMLkdhbBxXOQy7cacNXCz5mSMqQ=w240-h480-rw" alt="Profile" class="profile-image">
+                    <div class="profile-details">
+                        <p class="admin-name">Admin</p>
+                        <p class="name">Moti Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Settings Section -->
+<div class="settings-section">
+    <h1>General Settings</h1>
+    <div class="settings-card">
+        <div class="upload-logo">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="Logo" id="logo-preview">
+                <i class="fas fa-camera upload-icon"></i> <!-- Camera icon inside the logo -->
+            </div>
+            <a href="#" id="upload-logo-link">Upload Logo</a>
+        </div>
+        <form class="settings-form">
+            <div class="form-group">
+                <label for="site-name">Site Name</label>
+                <input type="text" id="site-name" placeholder="Bright Web">
+            </div>
+            <div class="form-group">
+                <label for="seo-title">SEO Title</label>
+                <input type="text" id="seo-title" placeholder="Bright web is a hybrid dashboard">
+            </div>
+            <div class="form-group">
+                <label for="seo-keywords">SEO Keywords</label>
+                <input type="text" id="seo-keywords" placeholder="CEO">
+            </div>
+            <div class="form-group">
+                <label for="copy-right">Copy Right</label>
+                <input type="text" id="copy-right" placeholder="All rights Reserved@brightweb">
+            </div>
+            <div class="form-group">
+                <label for="seo-description">SEO Description</label>
+                <textarea id="seo-description" placeholder="Bright web is a hybrid dashboard"></textarea>
+            </div>
+        </form>
+        <div class="save-button-container">
+            <button type="submit" class="save-btn">Save</button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</body>
+
+</html>

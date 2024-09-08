@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <h2>DashStack</h2>
+            </div>
+            <a href="dashboard2.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="Dashboard3.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="favrouites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a href="inbox.html"><i class="fas fa-inbox"></i> Inbox</a>
+            <a href="#"><i class="fas fa-list"></i> Order List</a>
+            <a href="productstock.html"><i class="fas fa-cubes"></i> Product Stack</a>
+
+            <p class="sidebar-title">Pages</p>
+            <a href="price.html"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="calendar2.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="todolist.html"><i class="fas fa-check-square"></i> To-Do</a>
+            <a href="contactlist.html"><i class="fas fa-address-book"></i> Contact</a>
+            <a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a>
+            <a href="UIcontrol.html"><i class="fas fa-sliders-h"></i> UI Elements</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="table.html"><i class="fas fa-table"></i> Table</a>
+        </div>
+
+        <div class="settings-logout">
+            <p class="sidebar-title">Settings</p>
+            <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="right-header">
+                <i class="fas fa-bell notification-icon"></i> <!-- Bell Icon -->
+                <select class="language-selector">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+                <div class="user-info">
+                    <img src="https://play-lh.googleusercontent.com/LqgSQHWNv9Dc7DS_J3BgYfZviCti_RBgQNDUHqFWqMLkdhbBxXOQy7cacNXCz5mSMqQ=w240-h480-rw" alt="Profile" class="profile-image">
+                    <div class="profile-details">
+                        <p class="admin-name">Admin</p>
+                        <p class="name">Moti Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order List Section -->
+        <div class="order-list-section">
+            <h3>Order Lists</h3>
+            <div class="filter-options">
+                <div class="filter">
+                    <label for="filter-date">Filter By:</label>
+                    <input type="date" id="filter-date">
+                </div>
+                <div class="filter">
+                    <label for="filter-order-type">Order Type:</label>
+                    <select id="filter-order-type">
+                        <option value="all">All</option>
+                        <option value="electric">Electric</option>
+                        <option value="book">Book</option>
+                        <option value="medicine">Medicine</option>
+                        <option value="mobile">Mobile</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="filter-order-status">Order Status:</label>
+                    <select id="filter-order-status">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="processing">Processing</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="on-hold">On Hold</option>
+                        <option value="in-transit">In Transit</option>
+                    </select>
+                </div>
+                <button class="reset-button">Reset Filter</button>
+            </div>
+
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>Christine Brooks</td>
+                        <td>089 Kutch Green Apt. 448</td>
+                        <td>04 Sep 2019</td>
+                        <td>Electric</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00002</td>
+                        <td>Rosie Pearson</td>
+                        <td>979 Immanuel Ferry Suite 526</td>
+                        <td>28 May 2019</td>
+                        <td>Book</td>
+                        <td><span class="status processing">Processing</span></td>
+                    </tr>
+                    <tr>
+                        <td>00003</td>
+                        <td>Michael Johnston</td>
+                        <td>5472 Simonis Field Suite 64</td>
+                        <td>15 Aug 2019</td>
+                        <td>Medicine</td>
+                        <td><span class="status rejected">Rejected</span></td>
+                    </tr>
+                    <tr>
+                        <td>00004</td>
+                        <td>Jennifer Lee</td>
+                        <td>854 Gerlach Drive Suite 46</td>
+                        <td>01 Jun 2019</td>
+                        <td>Mobile</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00005</td>
+                        <td>Thomas Clark</td>
+                        <td>31226 Washington Trail Suite 16</td>
+                        <td>20 Jul 2019</td>
+                        <td>Electric</td>
+                        <td><span class="status on-hold">On Hold</span></td>
+                    </tr>
+                    <tr>
+                        <td>00006</td>
+                        <td>Emily Davis</td>
+                        <td>2949 Fritsch Stravenue Suite 32</td>
+                        <td>10 Jul 2019</td>
+                        <td>Book</td>
+                        <td><span class="status in-transit">In Transit</span></td>
+                    </tr>
+                    <tr>
+                        <td>00007</td>
+                        <td>David Martinez</td>
+                        <td>84955 Lee Square Suite 90</td>
+                        <td>30 Jun 2019</td>
+                        <td>Mobile</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00008</td>
+                        <td>Sophia Turner</td>
+                        <td>20145 Stamm Road Suite 110</td>
+                        <td>12 Aug 2019</td>
+                        <td>Medicine</td>
+                        <td><span class="status processing">Processing</span></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</body>
+</html>

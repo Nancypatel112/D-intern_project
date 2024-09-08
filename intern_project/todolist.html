@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <h2>DashStack</h2>
+            </div>
+            <a href="dashboard2.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="Dashboard3.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="favrouites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a href="inbox.html"><i class="fas fa-inbox"></i> Inbox</a>
+            <a href="orderlist.html"><i class="fas fa-list"></i> Order List</a>
+            <a href="productstock.html"><i class="fas fa-cubes"></i> Product Stack</a>
+
+            <p class="sidebar-title">Pages</p>
+            <a href="price.html"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="calendar2.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="#"><i class="fas fa-check-square"></i> To-Do</a>
+            <a href="contactlist.html"><i class="fas fa-address-book"></i> Contact</a>
+            <a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a>
+            <a href="UIcontrol.html"><i class="fas fa-sliders-h"></i> UI Elements</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="table.html"><i class="fas fa-table"></i> Table</a>
+        </div>
+
+        <div class="settings-logout">
+            <p class="sidebar-title">Settings</p>
+            <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="right-header">
+                <i class="fas fa-bell notification-icon"></i> <!-- Bell Icon -->
+                <select class="language-selector">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+                <div class="user-info">
+                    <img src="https://play-lh.googleusercontent.com/LqgSQHWNv9Dc7DS_J3BgYfZviCti_RBgQNDUHqFWqMLkdhbBxXOQy7cacNXCz5mSMqQ=w240-h480-rw" alt="Profile" class="profile-image">
+                    <div class="profile-details">
+                        <p class="admin-name">Admin</p>
+                        <p class="name">Moti Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- To-Do List Section -->
+<div class="todo-section">
+    <div class="todo-header">
+        <h1>To-Do List</h1>
+        <button class="add-task-btn">Add New Task</button>
+    </div>
+    <div class="task-list">
+        <div class="task-card">
+            <input type="checkbox" id="task1">
+            <label for="task1">Meeting with CEO</label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+        <div class="task-card">
+            <input type="checkbox" id="task2">
+            <label for="task2">Pick up kids from school</label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+        <div class="task-card">
+            <input type="checkbox" id="task3">
+            <label for="task3">Shopping with brother</label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+        <div class="task-card">
+            <input type="checkbox" id="task4">
+            <label for="task4">Review with HR </label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+        <div class="task-card">
+            <input type="checkbox" id="task5">
+            <label for="task5">Fix UI issues</label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+        <div class="task-card">
+            <input type="checkbox" id="task6">
+            <label for="task6">Check Design Files</label>
+            <i class="fas fa-trash delete-icon"></i>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>

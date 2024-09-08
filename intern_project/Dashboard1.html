@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <h2>DashStack</h2>
+            </div>
+            <a href="dashboard2.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="Dashboard3.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="favrouites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a href="inbox.html"><i class="fas fa-inbox"></i> Inbox</a>
+            <a href="orderlist.html"><i class="fas fa-list"></i> Order List</a>
+            <a href="productstock.html"><i class="fas fa-cubes"></i> Product Stack</a>
+
+            <p class="sidebar-title">Pages</p>
+            <a href="price.html"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="calender2.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="todolist.html"><i class="fas fa-check-square"></i> To-Do</a>
+            <a href="contactlist.html"><i class="fas fa-address-book"></i> Contact</a>
+            <a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a>
+            <a href="UIcontrol.html"><i class="fas fa-sliders-h"></i> UI Elements</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="table.html"><i class="fas fa-table"></i> Table</a>
+        </div>
+
+        <div class="settings-logout">
+            <p class="sidebar-title">Settings</p>
+            <a href="contact2.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="signin.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="right-header">
+                <i class="fas fa-bell notification-icon"></i> <!-- Bell Icon -->
+                <select class="language-selector">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+                <div class="user-info">
+                    <img src="https://play-lh.googleusercontent.com/LqgSQHWNv9Dc7DS_J3BgYfZviCti_RBgQNDUHqFWqMLkdhbBxXOQy7cacNXCz5mSMqQ=w240-h480-rw" alt="Profile" class="profile-image">
+                    <div class="profile-details">
+                        <p class="admin-name">Admin</p>
+                        <p class="name">Moti Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards">
+            <div class="card">
+                <h2>40,689</h2>
+                <p>Total Users</p>
+            </div>
+            <div class="card">
+                <h2>10,293</h2>
+                <p>Total Orders</p>
+            </div>
+            <div class="card">
+                <h2>$89,000</h2>
+                <p>Total Sales</p>
+            </div>
+            <div class="card">
+                <h2>2,040</h2>
+                <p>Total Pending</p>
+            </div>
+        </div>
+
+        
+        <div class="salesdetails">
+            <h3>Sales Details</h3>
+            <div class="salesdetails-image">
+                <canvas id="salesChart" style="margin-top: 20px;"></canvas>
+            </div>
+        </div>
+        
+
+        
+        <!-- Deals Details Table -->
+        <div class="table-container">
+            <h3>Deals Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Pieces</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple Watch</td>
+                        <td>6096 Marigiane Landing</td>
+                        <td>12.09.2019</td>
+                        <td>12:53 PM</td>
+                        <td>423</td>
+                        <td>$34,296</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Sales Analysis (Units Sold)',
+                    data: [120, 190, 300, 500, 400, 600, 700], // Sample data
+                    backgroundColor: 'rgba(52, 152, 219, 0.6)',
+                    borderColor: 'rgba(52, 152, 219, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

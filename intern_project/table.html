@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo">
+                <h2>DashStack</h2>
+            </div>
+            <a href="dashboard2.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="Dashboard3.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="favrouites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a href="inbox.html"><i class="fas fa-inbox"></i> Inbox</a>
+            <a href="orderlist.html"><i class="fas fa-list"></i> Order List</a>
+            <a href="productstock.html"><i class="fas fa-cubes"></i> Product Stack</a>
+
+            <p class="sidebar-title">Pages</p>
+            <a href="price.html"><i class="fas fa-dollar-sign"></i> Pricing</a>
+            <a href="calendar2.html"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            <a href="todolist.html"><i class="fas fa-check-square"></i> To-Do</a>
+            <a href="contactlist.html"><i class="fas fa-address-book"></i> Contact</a>
+            <a href="invoice.html"><i class="fas fa-file-invoice"></i> Invoice</a>
+            <a href="UIcontrol.html"><i class="fas fa-sliders-h"></i> UI Elements</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="#"><i class="fas fa-table"></i> Table</a>
+        </div>
+
+        <div class="settings-logout">
+            <p class="sidebar-title">Settings</p>
+            <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="right-header">
+                <i class="fas fa-bell notification-icon"></i> <!-- Bell Icon -->
+                <select class="language-selector">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+                <div class="user-info">
+                    <img src="https://play-lh.googleusercontent.com/LqgSQHWNv9Dc7DS_J3BgYfZviCti_RBgQNDUHqFWqMLkdhbBxXOQy7cacNXCz5mSMqQ=w240-h480-rw" alt="Profile" class="profile-image">
+                    <div class="profile-details">
+                        <p class="admin-name">Admin</p>
+                        <p class="name">Moti Roy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order List Section -->
+        <div class="order-list-section">
+            <h3>Table</h3>
+            <div class="filter-options">
+                <div class="filter">
+                    <label for="filter-date">Filter By:</label>
+                    <input type="date" id="filter-date">
+                </div>
+                <div class="filter">
+                    <label for="filter-order-type">Order Type:</label>
+                    <select id="filter-order-type">
+                        <option value="all">All</option>
+                        <option value="electric">Electric</option>
+                        <option value="book">Book</option>
+                        <option value="medicine">Medicine</option>
+                        <option value="mobile">Mobile</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="filter-order-status">Order Status:</label>
+                    <select id="filter-order-status">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="processing">Processing</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="on-hold">On Hold</option>
+                        <option value="in-transit">In Transit</option>
+                    </select>
+                </div>
+                <button class="reset-button">Reset Filter</button>
+            </div>
+
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>Christine Brooks</td>
+                        <td>089 Kutch Green Apt. 448</td>
+                        <td>04 Sep 2019</td>
+                        <td>Electric</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00002</td>
+                        <td>Rosie Pearson</td>
+                        <td>979 Immanuel Ferry Suite 526</td>
+                        <td>28 May 2019</td>
+                        <td>Book</td>
+                        <td><span class="status processing">Processing</span></td>
+                    </tr>
+                    <tr>
+                        <td>00003</td>
+                        <td>Michael Johnston</td>
+                        <td>5472 Simonis Field Suite 64</td>
+                        <td>15 Aug 2019</td>
+                        <td>Medicine</td>
+                        <td><span class="status rejected">Rejected</span></td>
+                    </tr>
+                    <tr>
+                        <td>00004</td>
+                        <td>Jennifer Lee</td>
+                        <td>854 Gerlach Drive Suite 46</td>
+                        <td>01 Jun 2019</td>
+                        <td>Mobile</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00005</td>
+                        <td>Thomas Clark</td>
+                        <td>31226 Washington Trail Suite 16</td>
+                        <td>20 Jul 2019</td>
+                        <td>Electric</td>
+                        <td><span class="status on-hold">On Hold</span></td>
+                    </tr>
+                    <tr>
+                        <td>00006</td>
+                        <td>Emily Davis</td>
+                        <td>2949 Fritsch Stravenue Suite 32</td>
+                        <td>10 Jul 2019</td>
+                        <td>Book</td>
+                        <td><span class="status in-transit">In Transit</span></td>
+                    </tr>
+                    <tr>
+                        <td>00007</td>
+                        <td>David Martinez</td>
+                        <td>84955 Lee Square Suite 90</td>
+                        <td>30 Jun 2019</td>
+                        <td>Mobile</td>
+                        <td><span class="status completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>00008</td>
+                        <td>Sophia Turner</td>
+                        <td>20145 Stamm Road Suite 110</td>
+                        <td>12 Aug 2019</td>
+                        <td>Medicine</td>
+                        <td><span class="status processing">Processing</span></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    <!-- Product Stock Section -->
+    <div class="product-stock-section">
+        <div class="header-section">
+        </div>
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Piece</th>
+                    <th>Available Color</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY7Qs-yH11m3ECwHSp0iNe39v1GiwoyljqqQ&s" alt="Apple Watch" class="product-image"></td>
+                    <td>Apple Watch Series 4</td>
+                    <td>Digital Product</td>
+                    <td>$690.00</td>
+                    <td>63</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color black"></span>
+                            <span class="color pink"></span>
+                            <span class="color red"></span>
+                            <span class="color gray"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa0qKctOKlzwDsOP7N1V8vQyThFq04HqfUkA&s" alt="Microsoft Headphones" class="product-image"></td>
+                    <td>Microsoft Headphones</td>
+                    <td>Digital Product</td>
+                    <td>$190.00</td>
+                    <td>13</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color black"></span>
+                            <span class="color gray"></span>
+                            <span class="color white"></span>
+                            <span class="color blue"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://www.refurbished.store/cache/images/samsung-galaxy-a50-zwart-frontandback_600x600_BGresize_16777215-tj.png" class="product-image"></td>
+                    <td>Samsung A50</td>
+                    <td>Mobile</td>
+                    <td>$400.00</td>
+                    <td>67</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color black"></span>
+                            <span class="color white"></span>
+                            <span class="color blue"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://rukminim2.flixcart.com/image/850/1000/kokdci80/dslr-camera/v/e/x/z-24-200mm-z5-nikon-original-imag2zuekuxgxsgg.jpeg?q=90&crop=false" alt="Camera" class="product-image"></td>
+                    <td>Camera</td>
+                    <td>Electronic</td>
+                    <td>$420.00</td>
+                    <td>52</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color black"></span>
+                            <span class="color red"></span>
+                            <span class="color gray"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://m.media-amazon.com/images/I/61WQSvgxsHL._AC_UF1000,1000_QL80_.jpg" alt="Microsoft Headphones" class="product-image"></td>
+                    <td>Microsoft Headphones</td>
+                    <td>Digital Product</td>
+                    <td>$190.00</td>
+                    <td>13</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color black"></span>
+                            <span class="color gray"></span>
+                            <span class="color white"></span>
+                            <span class="color blue"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="https://www.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dw68719691/images/ss24/ribayat2344ss24skblu_1.jpg?sw=242&sh=363" alt="Women's Dress" class="product-image"></td>
+                    <td>Women's Dress</td>
+                    <td>Fashion</td>
+                    <td>$640.00</td>
+                    <td>635</td>
+                    <td>
+                        <div class="color-options">
+                            <span class="color maroon"></span>
+                            <span class="color blue"></span>
+                            <span class="color pink"></span>
+                            <span class="color purple"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fas fa-edit action-icon"></i>
+                        <i class="fas fa-trash action-icon"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
